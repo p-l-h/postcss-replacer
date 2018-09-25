@@ -1,20 +1,43 @@
 # PostCSS Replace [![Build Status][ci-img]][ci]
 
-[PostCSS] plugin to replace.
+[PostCSS] plugin to replace content with mappers
 
 [PostCSS]: https://github.com/postcss/postcss
-[ci-img]:  https://travis-ci.org/pzforever10@gmail.com/postcss-replace.svg
-[ci]:      https://travis-ci.org/pzforever10@gmail.com/postcss-replace
+[ci-img]:  https://travis-ci.org/pzforever10@gmail.com/postcss-replacer.svg
+[ci]:      https://travis-ci.org/pzforever10@gmail.com/postcss-replacer
 
 ```css
+// input content 
 .foo {
-    /* Input example */
+  src: url(abc);
+  src: url(123414)
+}
+```
+
+```javascript
+// in your postcss config file, for example .postcssrc.js
+module.exports = {
+  plugins: {
+    "postcss-replacer": {
+      mappers: [
+        {
+          source: 'abc',
+          target: 'def'
+        },
+        {
+          source: /\d+/,
+          target: 'xyz'
+        }
+      ]
+    }
+  }
 }
 ```
 
 ```css
 .foo {
-  /* Output example */
+  src: url(def);
+  src: url(xyz);
 }
 ```
 

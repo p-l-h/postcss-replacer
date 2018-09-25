@@ -31,6 +31,33 @@ it('wont replace abc to def',  function () {
     });
 });
 
+
+it('replace abc to def, def to xyz',  function () {
+    return run('@font-face { src: abc }', '@font-face { src: xyz }', {
+        mappers: [
+            {
+                source: 'abc',
+                target: 'def'
+            },
+            {
+                source: 'def',
+                target: 'xyz'
+            }
+        ]
+    });
+});
+
+it('replace /\d+/ to abc',  function () {
+    return run('@font-face { src: 1341234 }', '@font-face { src: abc }', {
+        mappers: [
+            {
+                source: /\d+/,
+                target: 'abc'
+            }
+        ]
+    });
+});
+
 /* Write tests here
 
 it('does something', () => {

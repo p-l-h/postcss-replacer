@@ -1,5 +1,5 @@
 {
-  "name": "postcss-replace",
+  "name": "postcss-replacer",
   "version": "0.0.1",
   "description": "PostCSS plugin to replace",
   "keywords": [
