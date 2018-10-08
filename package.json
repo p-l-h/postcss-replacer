@@ -1,6 +1,6 @@
 {
   "name": "postcss-replacer",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "PostCSS plugin to replace",
   "keywords": [
     "postcss",
@@ -9,13 +9,13 @@
     "postcss-replace",
     "replace"
   ],
-  "author": "peilonghui <peilonghui@baijiahulian.com>",
+  "author": "pzforever10 <pzforever10@gmail.com>",
   "license": "MIT",
   "repository": "pzforever10@gmail.com/postcss-replace",
   "bugs": {
-    "url": "https://github.com/pzforever10@gmail.com/postcss-replace/issues"
+    "url": "https://github.com/pzforever10/postcss-replace/issues"
   },
-  "homepage": "https://github.com/pzforever10@gmail.com/postcss-replace",
+  "homepage": "https://github.com/pzforever10/postcss-replace",
   "dependencies": {
     "postcss": "^6.0.16"
   },
